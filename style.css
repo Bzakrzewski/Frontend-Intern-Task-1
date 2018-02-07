@@ -1,0 +1,98 @@
+body {
+    background-color: #FFFF99;
+    font-family: 'Arial';
+    font-size: 100%;
+    color: #000000;
+}
+
+table {
+    width: 40vw;
+    height: 20vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-spacing: 0px; 
+}
+
+tr {    
+    height: 4vh;
+}
+
+tr:nth-child(odd) {
+   transform: translate(-5%);
+   border-radius: 0px 5px 5px 0px;
+   box-shadow: 3.3px 2px #666666;
+}
+
+tr:nth-child(even) {
+   transform: translate(5%);
+   border-radius: 0px 5px 5px 0px;
+   box-shadow: 3px 2px #666666;
+}
+
+tr:nth-child(odd) .td1 {
+    color: #666666;
+}
+
+tr:nth-child(even) .td2 {
+  color: #666666; 
+}
+
+.td1 {
+    text-align: left;
+    border: 0.5px solid #000000;
+    border-right: 0px;
+    border-radius: 5px 0px 0px 5px;
+    padding-left: 5px;
+    padding-right: -5px;
+    background-color: #EEEEEE;
+}
+
+.td2 {
+    font-weight: bold;
+    text-align: right;
+    border: 0.5px solid #000000;
+    border-left: 0px;
+    border-radius: 0px 5px 5px 0px;
+    padding-right: 5px;
+    padding-left: -5px;
+    background-color: #EEEEEE;
+}
+
+.text1 {
+    width: 35vw;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text2 {
+    width: 8vw;
+}
+
+/*RWD*/
+@media screen and (max-width: 1100px){
+    
+    table {
+       width: 35vw; 
+       height: 40vh;
+    }
+    
+    .text1 {
+        width: 25vw;
+    }
+    
+    .text2 {
+        width: 10vw;
+    }    
+}
+
+@media screen and (max-width: 600px){
+    table {
+        width: 25vw;
+    }
+    .text1 {
+        width: 15vw;
+    }
+}
